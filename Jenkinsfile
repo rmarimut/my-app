@@ -49,7 +49,7 @@ node{
 	try{
 		sh 'docker rm -f tomcattest'
 	}catch(error){
-		//  Do nothing if there is an exception
+		//  Do Nothing if there is an exception
 	}
    stage('Docker deployment'){
    sh 'docker run -d -p 8090:8080 --name tomcattest rmarim/myweb:0.0.2' 
